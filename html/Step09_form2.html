@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step09_form2.html</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>회원가입 폼입니다.</h1>
+      <form action="signup.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email" /><br />
+
+        <!-- 자식으로 받는 경우 (체크박스, 라디오에 응용) 
+          radio type중 name이 같은 경우 하나의 group으로 묶인다.
+        -->
+        <label> <input type="radio" name="gender" /> 남자 </label>
+        <label> <input type="radio" name="gender" /> 여자 </label>
+
+        <button type="submit">가입</button>
+      </form>
+    </div>
+  </body>
+</html>
