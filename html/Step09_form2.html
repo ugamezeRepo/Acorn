@@ -1,3 +1,8 @@
+<!-- Form 응용
+  element: fieldset, legend(범례), select, option
+  attribute: value, checked
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,15 +13,82 @@
   <body>
     <div class="container">
       <h1>회원가입 폼입니다.</h1>
+      <!-- 회원가입 -->
       <form action="signup.jsp">
+        <!-- Email -->
         <label for="email">이메일</label>
-        <input type="text" id="email" name="email" /><br />
+        <input type="text" id="email" name="email" /> <br />
 
-        <!-- 자식으로 받는 경우 (체크박스, 라디오에 응용) 
-          radio type중 name이 같은 경우 하나의 group으로 묶인다.
-        -->
-        <label> <input type="radio" name="gender" /> 남자 </label>
-        <label> <input type="radio" name="gender" /> 여자 </label>
+        <!-- 성별 -->
+        <div>
+          <fieldset>
+            <legend>성별 선택</legend>
+            <!-- label 이름을 자식으로 받는 경우 (체크박스, 라디오에 응용) 
+              radio type중 name이 같은 경우 하나의 group으로 묶인다.
+            -->
+            <label>
+              <input type="radio" name="gender" value="man" checked /> 남자
+            </label>
+            <label>
+              <input type="radio" name="gender" value="woman" /> 여자
+            </label>
+          </fieldset>
+        </div>
+
+        <!-- 취미 -->
+        <div>
+          <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label>
+              <input type="checkbox" name="hobby" value="soccer" /> 축구
+            </label>
+            <label>
+              <input type="checkbox" name="hobby" value="baking" /> 베이킹
+            </label>
+            <label>
+              <input type="checkbox" name="hobby" value="piano" /> 피아노
+            </label>
+            <label>
+              <input type="checkbox" name="hobby" value="etc" /> 기타
+            </label>
+          </fieldset>
+        </div>
+
+        <!-- 직업 -->
+        <div>
+          <label for="job">직업</label>
+          <select id="job" name="job">
+            <option value="">선택</option>
+            <option value="programmer">프로그래머</option>
+            <option value="doctor">의사</option>
+            <option value="pianist">피아니스트</option>
+            <option value="etc">기타</option>
+          </select>
+        </div>
+
+        <!-- 점심 -->
+        <!-- option에 value가 없으면 innerText가 선택된다. -->
+        <div>
+          <select name="lunch" id="lunch">
+            <optgroup label="분식">
+              <!-- <option value="라면">라면</option> -->
+              <option>라면</option>
+              <option>쫄면</option>
+              <option>김밥</option>
+            </optgroup>
+            <optgroup label="중식">
+              <option>자장면</option>
+              <option>짬뽕</option>
+              <option>군만두</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- 파일 타입 -->
+        <div>
+          <label for="myFile">첨부파일</label>
+          <input type="file" id="myFile" name="myFile" />
+        </div>
 
         <button type="submit">가입</button>
       </form>
