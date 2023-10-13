@@ -9,13 +9,15 @@
   <body>
     <h1>이력서</h1>
 
-    <form action="submit.jsp">
+    <form action="submit.jsp" id="form">
       <!-- 기본 인적 사항 -->
       <div class="personality">
         <div class="myPhoto"><img src="images/0.png" /></div>
         <div class="metadata">
-          <h2>홍길동</h2>
-          <span>남 1984년, 23세</span>
+          <div class="myName">
+            <h2>홍길동</h2>
+            <span>남 1984년, 23세</span> <br />
+          </div>
           <table id="profileTable">
             <tr>
               <th>휴대폰</th>
@@ -57,20 +59,26 @@
 
       <!-- 학력 -->
       <h3>학력</h3>
-      <table>
+      <table id="schoolTable">
         <tr>
-          <td>0000.00-0000.00</td>
-          <td>OO 고등학교</td>
+          <th>0000.00-0000.00</th>
+          <td>
+            <p>OO 고등학교</p>
+            <p class="schoolMajor">OO과 졸업</p>
+          </td>
         </tr>
         <tr>
-          <td>0000.00-0000.00</td>
-          <td>OO 대학교 OO과</td>
+          <th>0000.00-0000.00</th>
+          <td>
+            <p>OO 대학교</p>
+            <p class="schoolMajor">OO과 졸업 예정(석사 과정)</p>
+          </td>
         </tr>
       </table>
 
       <!-- 경력 -->
       <h3>경력</h3>
-      <table>
+      <table id="careerTable">
         <tr>
           <td>잡코 디자인팀</td>
           <td>대리</td>
@@ -82,8 +90,6 @@
           <td>업무 업무 업무</td>
         </tr>
       </table>
-
-      <!-- 대외 활동 -->
 
       <div><button>제출</button></div>
     </form>
