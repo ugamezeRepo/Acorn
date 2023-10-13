@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.personality {
+  background-color: aliceblue;
+  justify-content: center;
+}
+.metadata > h2 {
+  display: inline-block;
+}
+.personality > div {
+  display: inline;
+}
+table {
+  display: inline;
+}
+#profileTable th {
+  padding-right: 1px solid;
+  color: rgb(12, 11, 13);
+}
+#profileTable td {
+  color: grey;
+}
+
+#totalResume {
+  border: 1px solid black;
+}
+#totalResume > table {
+  border: 1px solid blue;
+}
+#totalResume > table > tr {
+  border: 1px solid red;
+}
