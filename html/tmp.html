@@ -5,191 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>연습장</title>
     <style>
-      ul > li {
-        list-style-type: none;
+      .metadata > h2 {
+        display: inline-block;
+      }
+      .personality > div {
         display: inline;
       }
-
-      ol > li {
-        list-style-type: lower-greek;
-        font-weight: bold;
+      table {
+        display: inline;
       }
-
-      dd {
-        margin: 0 0 0 0.8rem;
+      #profileTable th {
+        padding-right: 1px solid;
+        color: rgb(12, 11, 13);
+      }
+      #profileTable td {
+        color: grey;
       }
     </style>
   </head>
   <body>
-    <!-- 연습한 것 -->
-    <div>
-      <!-- ul, ol, dl 연습 -->
-      <!-- <div>
-        <h1>ul, ol, dl 연습</h1>
-        <h2>ul</h2>
-        <ul>
-          <li>김구라</li>
-          <li>해골</li>
-          <li>원숭이</li>
-        </ul>
+    <h1>이력서</h1>
 
-        <h2>ol</h2>
-        <ol>
-          <li>김구라</li>
-          <li>해골</li>
-          <li>원숭이</li>
-        </ol>
-
-        <h2>dl</h2>
-        <dt>HTML</dt>
-        <dd>HyperText Markup Language의 약자이다.</dd>
-      </div> -->
-      <!-- table 연습 -->
-      <!-- <div>
-        <h1>table 연습</h1>
-        <h2>table 생성</h2>
-        <table border="1">
-          <thead>
+    <form action="submit.jsp">
+      <div class="personality">
+        <div class="myPhoto"><img src="images/0.png" /></div>
+        <div class="metadata">
+          <h2>홍길동</h2>
+          <span>남 1984년, 23세</span>
+          <table id="profileTable">
             <tr>
-              <th>번호</th>
-              <th>이름</th>
+              <th>휴대폰</th>
+              <td>010-0000-0000</td>
+            </tr>
+            <tr>
+              <th>이메일</th>
+              <td>job@jobkorea.co.kr</td>
+            </tr>
+            <tr>
               <th>주소</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th>총 인원</th>
-              <td>3명</td>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>김구라</td>
-              <td>노량진</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>해골</td>
-              <td>행신동</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>원숭이</td>
-              <td>역삼동</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>table 합치기</h2>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>번호</th>
-              <th>이름</th>
-              <th>주소</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th>총 인원</th>
-              <td colspan="2">3명</td>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>김구라</td>
-              <td>노량진</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>해골</td>
-              <td>행신동</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>원숭이</td>
-              <td>역삼동</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-    </div>
-
-    <!-- div 연습 -->
-    <div>
-      <h1>form 연습</h1>
-      <div>
-        <form action="index.jsp">
-          <table>
-            <tr>
-              <td>
-                <label for="email">이메일</label>
-              </td>
-              <td>
-                <input type="email" id="email" name="email" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="pwd">비밀번호</label>
-              </td>
-              <td>
-                <input type="password" id="pwd" name="password" />
-              </td>
+              <td>서울시 서초구 서초대로</td>
             </tr>
           </table>
-          <fieldset>
-            <legend>성별</legend>
-            <label>
-              <input type="radio" name="gender" value="man" checked /> 남자
-            </label>
-            <label>
-              <input type="radio" name="gender" value="woman" /> 여자
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>취미</legend>
-            <label>
-              <input type="checkbox" name="hobby" value="soccer" /> 축구
-            </label>
-            <label>
-              <input type="checkbox" name="hobby" value="baseball" /> 야구
-            </label>
-            <label>
-              <input type="checkbox" name="hobby" value="basketball" /> 농구
-            </label>
-          </fieldset>
-          <div>
-            <label for="job">직업</label>
-            <select name="job" id="job">
-              <option value="">선택</option>
-              <option value="programmer">개발자</option>
-              <option value="cook">요리사</option>
-              <option value="none">무직</option>
-              <option value="etc">기타</option>
-            </select>
-          </div>
-          <div>
-            <label for="menu">점심메뉴</label>
-            <select name="menu" id="menu">
-              <optgroup label="분식">
-                <option>라면</option>
-                <option>순대</option>
-                <option>떡볶이</option>
-              </optgroup>
-              <optgroup label="한식">
-                <option>비빔밥</option>
-                <option>된장찌개</option>
-                <option>김치찌개</option>
-              </optgroup>
-            </select>
-          </div>
-
-          <button type="submit">login</button>
-        </form>
+        </div>
       </div>
-    </div>
+
+      <div><button>제출</button></div>
+    </form>
   </body>
 </html>
