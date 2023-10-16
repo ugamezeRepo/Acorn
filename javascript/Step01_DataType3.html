@@ -21,7 +21,39 @@
       let name = "kimgura"; // string type
       let isMan = true; // boolean type
 
+      // 한 줄 작성
       let mem1 = { num: 1, name: "김구라", isMan: true };
+
+      // 여러 줄 작성
+      let mem2 = {
+        num: 2,
+        name: "해골",
+        isMan: false,
+      };
+
+      // object에 data를 넣을 떄, 미리 만들어진 변수명으로 참조해서 넣을 수도 있다.
+      let mem3 = { num: num, name: name, isMan: isMan };
+      // 위 표현식을 줄여서 아래와 같이 작성 가능
+      let mem4 = { num, name, isMan };
+
+      // a는 object type
+      let a = mem1;
+      // b는 number type
+      let b = mem1.num;
+      // c는 string type
+      let c = mem1.name;
+      // d는 boolean type
+      let d = mem1.isMan;
+
+      // 빈 object를 만들고 나중에 필요에 따라 데이터 추가 가능
+      let mem5 = {};
+      mem5.num = 3;
+      mem5.name = "원숭이";
+      mem5.isMan = true;
+
+      // 이미 만들어진 object에 저장된 값 수정
+      mem1.num = 999;
+      mem1.name = "이정호";
     </script>
   </body>
 </html>
