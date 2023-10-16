@@ -1,0 +1,35 @@
+<!-- Function Type -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step01_DataType6.html</title>
+  </head>
+  <body>
+    <h1>Javascript 데이터 타입</h1>
+    <p><strong>function</strong> type</p>
+    <button onclick="keepElephant()">코끼리 넣기.</button>
+    <button onclick="inputElephant()">코끼리 넣기!</button>
+
+    <script>
+      // 코끼리를 냉장고에 넣는 작업
+      // 선언( declaration)
+      let keepElephant = function () {
+        console.log("1. 냉장고 문을 연다.");
+        console.log("2. 코끼리를 집어 넣는다.");
+        console.log("3. 냉장고 문을 닫는다.");
+      };
+      // 위와 아래는 같다.
+      function inputElephant() {
+        console.log("1) 냉장고 문을 연다.");
+        console.log("2) 코끼리를 집어 넣는다.");
+        console.log("3) 냉장고 문을 닫는다.");
+      }
+      // 호출( call)
+      keepElephant();
+      inputElephant();
+    </script>
+  </body>
+</html>
