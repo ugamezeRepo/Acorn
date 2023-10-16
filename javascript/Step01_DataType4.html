@@ -1,0 +1,35 @@
+<!-- Array Type -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step01_DataType4.html</title>
+  </head>
+  <body>
+    <h1>Javascript 데이터 타입</h1>
+    <p><strong>array</strong> type</p>
+
+    <script>
+      /*
+        data 중에서 순서가 중요한 데이터도 있다.
+        
+        내일 제일 좋아하는 음식 순서
+        물냉면, 볶음밥, 치킨
+      */
+      let foods = ["물냉면", "볶음밥", "치킨🍗"];
+
+      // 참조 하는 방법: Index 이용
+      console.log(`${foods[0]}`);
+
+      // 배열의 특정 인덱스에 저장된 item을 변수에 저장
+      let a = foods[0];
+      let b = foods[1];
+
+      // 배열의 특정 인덱스에 저장된 item 수정
+      foods[0] = "자장면";
+      foods[1] = "짬뽕";
+    </script>
+  </body>
+</html>
