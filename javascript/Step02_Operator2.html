@@ -1,0 +1,41 @@
+<!-- 논리 연산자 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step02_Operator2.html</title>
+  </head>
+  <body>
+    <h1>논리 연산자</h1>
+
+    <script>
+      /*
+        2. 논리 연산자
+        Boolean Type의 논리값을 연산해주는 인자.
+        &&(and), ||(or), ==(loose equality), ===(strict eqaulity),
+        !(not)
+      */
+
+      // and 연산자 &&
+      // 연산에 참여하는 boolean값이 모두 true면 true이다.
+      let resultAnd1 = false && false; // false
+      let resultAnd2 = false && true; // false
+      let resultAnd3 = true && false; // false
+      let resultAnd4 = true && true; // true
+
+      // or 연산자 ||
+      // 연산에 참여하는 boolean값이 하나라도 true면 true이다.
+      let resultOr1 = false || false; // false
+      let resultOr2 = false || true; // true
+      let resultOr3 = true || false; // true
+      let resultOr4 = true || true; // true
+
+      // !(not) 연산자는 논리값을 반전시킨다.
+      // 읽을 때 "~이 아니면"이라고 읽으면 된다.
+      let resultNot1 = !true; // false
+      let resultNot2 = !false; // true
+    </script>
+  </body>
+</html>
