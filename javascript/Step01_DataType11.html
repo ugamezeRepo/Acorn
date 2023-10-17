@@ -1,0 +1,32 @@
+<!-- 매개변수( Parameter) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step01_DataType11.html</title>
+  </head>
+  <body>
+    <h1>function type의 매개변수</h1>
+
+    <script>
+      /*
+        function () {}
+        ( ) -> 함수에 필요한 매개변수 선언 영역
+        { } -> javascript 실행 영역
+
+        fcuntion (msg) {}
+        msg가 매개변수 ( 예약어(let 등) 생략
+        함수에 전달되는 값을 받는 변수. 해당 함수 내에서만 사용 가능
+      */
+
+      let printMsg = function (msg) {
+        console.log("----------");
+        console.log(msg);
+        console.log("----------");
+      };
+      printMsg("hello");
+      printMsg("bye");
+    </script>
+  </body>
+</html>
