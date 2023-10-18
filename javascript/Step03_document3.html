@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step03_document3.html</title>
+  </head>
+  <body>
+    <input type="text" id="inputMsg" />
+    <button id="sendBtn">전송</button>
+    <p id="result"></p>
+
+    <script>
+      // Quiz1. input요소에 문자열을 입력하고 전송 버튼을 누르면
+      // 입력한 문자열을 p요소의 innerText로 출력하라.
+      document.querySelector("#sendBtn").addEventListener("click", () => {
+        let text = document.querySelector("#inputMsg").value;
+        document.getElementById("result").innerText = text;
+      });
+    </script>
+  </body>
+</html>
