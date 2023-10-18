@@ -1,4 +1,9 @@
-<!-- Document Object -->
+<!-- Document Object 
+  document 오브젝트와 요소 접근법 및 이벤트 발생
+  document
+  .queryselector('el')
+  .addEventLitener('event', () => { });
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +14,59 @@
   </head>
   <body>
     <h1>Document Object 사용해보기</h1>
-    <p id="one">p1</p>
-    <p id="two">p2</p>
-    <p id="three">p3</p>
+
+    <div id="pTable">
+      <p id="one">p1</p>
+      <p id="two" class="my-class">p2</p>
+      <p id="three" class="my-class">p3</p>
+    </div>
+    <div id="inputTable">
+      <input type="text" id="inputEmail" placeholder="이메일 입력..." />
+      <input type="text" id="inputMsg" placeholder="메세지 입력..." />
+    </div>
+    <div id="btnTable">
+      <button id="myBtn">눌러보셈</button>
+      <button id="changeBtn">바꾸기</button>
+      <button id="changeColor">색상 바꾸기</button>
+    </div>
 
     <script>
-      document.querySelector("#one");
+      let a = document.querySelectorAll(".my-class");
+      let b = document.querySelector("#inputEmail").value;
+      let c = () => (document.querySelector("#inputMsg").value = "메세지!");
+
+      // 콜백함수를 이용하여 id="myBtn"인 요소에 "click"이벤트가 발생했을 경우 실행할 함수 생성
+      // .addEventListener("이벤트명", () => { \});
+      document.querySelector("#myBtn").addEventListener("click", () => {
+        console.log("눌렀네요?");
+      });
+
+      // Quiz1. id="changeBtn"인 버튼을 눌렀을 때,
+      // h1요소의 innerText를 "안녕하세요."로 변경해보아라.
+      document
+        .querySelector("#changeBtn")
+        .addEventListener(
+          "click",
+          () => (document.querySelector("h1").innerText = "안녕하세요.")
+        );
+
+      // Quiz2. id="chagneColor"인 버튼을 눌렀을 때,
+      // h1 요소의 글자색을 "blue"로 변경해보아라.
+      document.querySelector("#changeColor").addEventListener("click", () => {
+        document.querySelector("h1").style.color = "blue";
+        // + 배경색 "yellow", 글자크기 "50px"
+        document.querySelector("h1").style.backgroundColor = "yellow";
+        document.querySelector("h1").style.fontSize = "50px";
+      });
+
+      // Self-Quiz. 버튼을 클릭했을 때, 이벤트를 발생시키는 함수를 만들어라.
+      function event(btn, el, func) {
+        document.querySelector(btn).addEventListener("click", () => func());
+      }
+
+      const chgCol = (el, col) => {
+        document.querySelector(el).style.color = col;
+      };
     </script>
   </body>
 </html>
