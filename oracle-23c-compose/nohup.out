@@ -1,0 +1,5 @@
+ Container oracle-23c-compose-database-1  Created
+Attaching to oracle-23c-compose-database-1
+oracle-23c-compose-database-1  | Starting Oracle Net Listener.
+oracle-23c-compose-database-1  | Oracle Net Listener started.
+oracle-23c-compose-database-1  | Starting Oracle Database instance FREE.
