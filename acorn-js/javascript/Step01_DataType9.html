@@ -1,0 +1,43 @@
+<!-- 전역과 지역 범위
+  Global Scope, Local Scope
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step01_DataType9.html</title>
+  </head>
+  <body>
+    <h1>Javascript 데이터 타입</h1>
+    <p><strong>function </strong> type의 영역( scope)</p>
+
+    <script>
+      /*
+        페이지 로딩 시점에 실행되는 영역은 전역( Global Scope).
+        전역에 정의된 자원은 어디에서나 사용 가능.
+      */
+      let myName = "김구라";
+
+      function test1() {
+        // 함수 내에 속한 영역은 지역( Local Scope).
+        // 지역에 정의된 자원은 해당 지역에서만 사용 가능.
+        let yourName = "해골";
+        console.log(`지역 선언: ${yourName}`);
+      }
+
+      console.log(`전역 선언: ${myName}`);
+      // 지역 선언은 전역에서 사용할 수 없으므로 Error
+      // console.log(`지역 선언: ${yourName}`);
+
+      function test2() {
+        // 지역에선 전역에 정의된 자원 사용 가능.
+        console.log(`전역 선언: ${myName}`);
+      }
+
+      test1();
+      test2();
+    </script>
+  </body>
+</html>

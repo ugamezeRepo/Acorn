@@ -1,0 +1,37 @@
+<!-- html5에서 추가된 form요소
+  type value: color, range, date, time, datetime-local, number, email
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step09_form3.html</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>html5에서 추가된 form요소</h1>
+      <p>
+        웹브라우저의 종류와 버전별로 지원이 될 수도 있고 안 될 수도 있다.
+        <a href="https://caniuse.com"> 여기서 확인 </a>
+      </p>
+
+      <form action="insert.jsp">
+        <div>색상 선택 <input type="color" name="color" /></div>
+        <div>범위 선택 <input type="range" name="range" /></div>
+        <div>날짜 선택 <input type="date" name="date" /></div>
+        <div>시간 선택 <input type="time" name="time" /></div>
+        <div>
+          날짜, 시간 선택 <input type="datetime-local" name="datetime" />
+        </div>
+        <!-- 스마트폰에서 숫자, 이메일전용 자판이 나온다. -->
+        <div>
+          숫자
+          <input type="number" name="number" min="0" max="10" step="1" />
+        </div>
+        <div>이메일 <input type="email" name="email" /></div>
+      </form>
+    </div>
+  </body>
+</html>

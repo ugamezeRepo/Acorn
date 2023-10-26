@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step03_document2.html</title>
+    <style>
+      .box {
+        margin: 30px 0;
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="moveBoxBtn">움직이기</button>
+    <div class="box"></div>
+    <input type="text" id="inputMsg" placeholder="메세지 입력" />
+    <button id="sendMsgBtn">전송</button>
+
+    <script>
+      // Quiz1. 움직이기 버튼을 누르면 오른쪽으로 100px 움직이게 하라
+      document
+        .querySelector("#moveBoxBtn")
+        .addEventListener(
+          "click",
+          () => (document.querySelector(".box").style.marginLeft = "100px")
+        );
+
+      // Quiz2. 위 input요소에 문자열을 입력한 후 전송 버튼을 누르면
+      // 입력한 문자열이 콘솔창에 출력되도록 하라.
+      document.querySelector("#sendMsgBtn").addEventListener("click", () => {
+        let text = document.querySelector("#inputMsg").value;
+        console.log(text);
+      });
+    </script>
+  </body>
+</html>
