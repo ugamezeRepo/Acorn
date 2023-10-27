@@ -1,5 +1,6 @@
 package test.main;
 
+@SuppressWarnings("unused")
 public class MainClass06 {
 	public static void main(String[] args) {
 		System.out.println("main 메서드가 시작되었습니다.");

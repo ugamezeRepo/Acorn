@@ -1,5 +1,5 @@
 package test.main;
-
+@SuppressWarnings("unused")
 public class MainClass02 {
 	public static void main(String[] args) {
 		// Quiz. 점수 평균 구하기.

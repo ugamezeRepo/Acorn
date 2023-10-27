@@ -1,5 +1,6 @@
 package test.main;
 
+@SuppressWarnings("unused")
 /*
  *	[ Java 참조 데이터 type ]
  * 
