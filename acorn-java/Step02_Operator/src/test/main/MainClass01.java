@@ -2,9 +2,9 @@ package test.main;
 
 @SuppressWarnings("unused")
 /*
- *  1. 산술연산자 테스트
- *  
- *  +, -, *, /, %
+ * 1. 산술연산자 테스트
+ * 
+ * +, -, *, /, %
  */
 public class MainClass01 {
 	// run ( 실행, app 을 launch ) 했을때 실행의 흐름이 시작되는 특별한 main 메소드
