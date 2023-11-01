@@ -13,6 +13,7 @@ public class MainClass05 {
 		// 문자열을 한 줄 입력받고
 		String str = scan.nextLine();
 		
+		scan.close();
 		// 입력받은 문자열을 콘솔에 출력
 		System.out.println(str);
 		System.out.println("main 메소드가 종료되었습니다.");

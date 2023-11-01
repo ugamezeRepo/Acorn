@@ -1,5 +1,6 @@
 package test.main;
 
+@SuppressWarnings("unused")
 public class MainClass01 {
 	public static void main(String[] args) {
 		//int type 5개를 저장하고 있는 배열 객체 생성해서 참조값을 nums 라는 지역 변수에 담기

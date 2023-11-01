@@ -5,6 +5,7 @@ import test.mypac.HardDisk;
 import test.mypac.MacBook;
 import test.mypac.Memory;
 
+@SuppressWarnings("unused")
 public class MainClass03 {
 	public static void main(String[] args) {
 		/**
