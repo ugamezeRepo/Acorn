@@ -1,7 +1,7 @@
 package test.main;
 
-import test.atuo.Engine;
-import test.atuo.SportsCar;
+import test.auto.Engine;
+import test.auto.SportsCar;
 
 public class MainClass09 {
 	public static void main(String[] args) {

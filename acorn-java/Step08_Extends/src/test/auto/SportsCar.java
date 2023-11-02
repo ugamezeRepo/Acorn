@@ -1,4 +1,4 @@
-package test.atuo;
+package test.auto;
 
 public class SportsCar extends Car{
 	public SportsCar(Engine engine) {
