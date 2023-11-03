@@ -5,9 +5,11 @@ import test.mypac.Weapon;
 
 public class MainClass02 {
 	public static void main(String[] args) {
+		String data = "asdasdsad";
 		// useString 메서드 호출
 		MainClass02.useString("abcd");
 		useString("abcd1234");
+		useString(data);
 
 		// 아래의 useWeapon() 메서드 호출
 		useWeapon(new MyWeapon());
