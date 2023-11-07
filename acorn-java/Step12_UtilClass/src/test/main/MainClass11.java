@@ -25,7 +25,7 @@ public class MainClass11 {
         if ( dic.containsKey(word)) {
             System.out.printf("%s의 뜻은 %s입니다. %n", word, dic.get(word));
         } else {
-            System.out.println("안타깝게도 사전에 없는 단어입니다.");
+            System.out.printf("안타깝게도 %s이란 단어는 사전에 없는 단어입니다.", word);
         }
     }
 }
