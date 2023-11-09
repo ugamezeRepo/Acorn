@@ -15,16 +15,21 @@ public class QuizMain2 {
         int second = 1, minute = 0;
         while (true) {
             if (second == 60) { minute++; second=0;}
-            else second++;
+            
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
                 System.out.printf("%d분 %d초 %n", minute, second);
             } catch (InterruptedException e) {
                 System.out.printf("error: %s", e.getMessage());
                 break;
             } finally {
-                if (minute == 30) System.out.println("30분이 경과되어 자동 종료됩니다.");
+                if (minute == 30) {
+                    System.out.println("30분이 경과되어 자동 종료됩니다.");
+                    break;
+                }
+                
             }
+            second++;
         }
         System.out.println("main 메서드가 종료됩니다.");
     }
