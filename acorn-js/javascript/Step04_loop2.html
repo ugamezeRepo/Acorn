@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_loop2.html</title>
+</head>
+<body>
+    <h1>배열과 반복문</h1>
+    <button id="printBtn">출력하기</button>
+    <button id="printBtn2">출력하기2</button>
+    <ul id="nameList">
+        
+    </ul>
+    <script>
+        //배열이 미리 준비 되어 있다고 가정 
+        let names=["김구라", "해골", "원숭이", "주뎅이", "덩어리"];
+
+        //출력하기 버튼을 눌렀을때 names 배열에 저장된 이름(문자열)이 순서대로 콘솔창에 출력되도록 프로그래밍 
+        //해 보세요.
+        document.querySelector("#printBtn").addEventListener("click", function(){
+            // console.log(names[0]);
+            // console.log(names[1]);
+            // console.log(names[2]);
+            // console.log(names[3]);
+            // console.log(names[4]);
+            for(let i=0; i<names.length; i++){
+                console.log(names[i]);
+            }
+        });
+
+        //출력하기2 버튼을 눌렀을때  names 배열에 저장된 이름을 이용해서 ul 요소에 li 를 순서대로 출력해 보세요
+        document.querySelector("#printBtn2").addEventListener("click", function(){
+            //array 에 저장된 아이템의 갯수 만큼 반복문 돌면서 
+            for(let i=0; i<names.length; i++){
+                //1. li 요소를 동적으로 만든다.
+                let li=document.createElement("li");
+                //2. 만든 li 요소에 이름을 innerText 로 출력한다.
+                li.innerText=names[i];
+                //3. 이름이 출력된 li 요소를 ul 에 추가한다.
+                document.querySelector("#nameList").append(li);
+            }
+        });
+    </script>
+</body>
+</html>
