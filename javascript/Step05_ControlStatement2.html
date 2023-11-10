@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step05_ControlStatement2.html</title>
+  </head>
+  <body>
+    <h1>if문 활용</h1>
+
+    <script>
+      // Js에서는 어떤 변수 안에 있는 값이 비었는 지 여부를
+      // if문으로 확인 가능
+
+      // empty로 판정되는 값( false와 마찬가지)
+      // 0, "", null, undefined
+
+      let obj = { name: "kim" };
+
+      if (obj) {
+        console.log(`obj : ${obj.name}`);
+      }
+
+      let obj2 = null;
+      let obj3 = undefined;
+
+      if (obj2) {
+        console.log(`obj2 : ${obj2.name}`);
+      }
+
+      if (obj3) {
+        console.log(`obj3 : ${obj3.name}`);
+      }
+    </script>
+  </body>
+</html>

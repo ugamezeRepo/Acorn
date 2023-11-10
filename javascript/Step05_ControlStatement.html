@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step05_ControlStatement.html</title>
+  </head>
+  <body>
+    <h1>조건부로 실행되는 if문 블럭 구성하기</h1>
+    <p id="one"></p>
+
+    <script>
+      // 이름을 입력받아 name상수에 대입
+      const name = prompt("이름을 입력하세요: ");
+
+      greetMaster(name);
+      function greetMaster(name) {
+        if (name === "김구라") {
+          return (document.querySelector(
+            "#one"
+          ).innerText = `${name} 마마, 어서오시옵소서`);
+        }
+
+        return (document.querySelector(
+          "#one"
+        ).innerText = `${name} 님 반갑습니다.`);
+      }
+    </script>
+  </body>
+</html>
