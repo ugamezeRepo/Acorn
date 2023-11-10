@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_loop4.html</title>
+</head>
+<body>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <button id="changeBtn">바꾸기</button>
+    <script>
+        
+        //바꾸기 버튼을 눌렀을때 모든 p 요소의 innerText 를 "changed!" 로 변경하기
+        document.querySelector("#changeBtn").addEventListener("click", function(){
+            document.querySelectorAll("p").forEach(function(item){
+                //item 은 p 요소의 참조값이다. 
+                item.innerText="changed!";
+            });
+        }); 
+
+    </script>
+</body>
+</html>
