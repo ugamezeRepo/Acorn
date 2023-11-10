@@ -8,6 +8,7 @@
   <body>
     <h1>조건부로 실행되는 if문 블럭 구성하기</h1>
     <p id="one"></p>
+    <p id="two"></p>
 
     <script>
       // 이름을 입력받아 name상수에 대입
@@ -19,11 +20,19 @@
           return (document.querySelector(
             "#one"
           ).innerText = `${name} 마마, 어서오시옵소서`);
+        } else {
+          return (document.querySelector(
+            "#one"
+          ).innerText = `${name} 님 반갑습니다.`);
         }
 
-        return (document.querySelector(
-          "#one"
-        ).innerText = `${name} 님 반갑습니다.`);
+        // 비교하는 code가 복잡한 경우 따로 비교 결과를 얻은 후
+        let isEqual = name === "김구라";
+        if (isEqual) {
+          document.querySelector("#two").innerText("주인님 반갑습니다.");
+        } else {
+          document.querySelector("#two").innerText("누구쎼옹");
+        }
       }
     </script>
   </body>
