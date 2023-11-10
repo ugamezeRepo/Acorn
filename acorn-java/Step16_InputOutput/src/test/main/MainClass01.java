@@ -1,8 +1,7 @@
-package text.main;
+package test.main;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Scanner;
 
 /**
  *  입력, 출력 (Input, Output)
